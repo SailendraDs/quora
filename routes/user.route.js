@@ -18,7 +18,7 @@ router.get('/timeline',authenticate, async (req, res) => {
 	const new_user = await User.findById({_id:id})
 	console.log(new_user);
 	res.render('user-timeline',{User:new_user})
-	// MongoClient.connect('mongodb://localhost:27017', function(err, client) {
+	// MongoClient.connect('mongodb://127.0.0.1:27017', function(err, client) {
     //     if(err) throw err;
     //     var db =client.db("openDB")
     //     var collection = db.collection('users');

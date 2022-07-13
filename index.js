@@ -13,7 +13,7 @@ const passport = require('passport')
 const FacebookStrategy = require('passport-facebook').Strategy
 const GoogleStrategy = require('passport-google-oauth2').Strategy
 const User = require('./models/user.model')
-// require("dotenv").config()
+
 // Routes
 
 
@@ -60,7 +60,6 @@ app.use(function (req, res, next) {
 
 
 // Middleware
-
 
 
 require('dotenv').config();

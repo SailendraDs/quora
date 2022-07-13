@@ -141,7 +141,7 @@ router.post("/answers/:id", authenticate, async function(req,res){
         const objid=foundOne._id
         console.log(objid);
         // console.log(req.file.filename);
-        MongoClient.connect('mongodb://localhost:27017', function(err, client) {
+        MongoClient.connect('mongodb://127.0.0.1:27017', function(err, client) {
         if(err) throw err;
         var db =client.db("openDB")
         var collection = db.collection('questions');
@@ -174,7 +174,7 @@ router.post("/comments/:id", authenticate , async function(req,res){
 
         var datecomm = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
 
-        MongoClient.connect('mongodb://localhost:27017', function(err, client) {
+        MongoClient.connect('mongodb://127.0.0.1:27017', function(err, client) {
         if(err) throw err;
         var db =client.db("openDB")
         var collection = db.collection('questions');
@@ -201,7 +201,7 @@ router.post("/answercomment/:id", authenticate , async function(req,res){
 
     questionModel.findOne({_id:Questionid},function(err,foundOne){
         const objid=foundOne._id
-        MongoClient.connect('mongodb://localhost:27017', function(err, client) {
+        MongoClient.connect('mongodb://127.0.0.1:27017', function(err, client) {
         if(err) throw err;
         var db =client.db("openDB")
         var collection = db.collection('questions');
@@ -237,7 +237,7 @@ router.post("/upvote", authenticate ,function(req,res){
     questionModel.findOne({_id:qid},function(err,foundOne){
         const objid=foundOne._id
         const upvote=foundOne.upvotes + 1
-        MongoClient.connect('mongodb://localhost:27017', function(err, client) {
+        MongoClient.connect('mongodb://127.0.0.1:27017', function(err, client) {
         if(err) throw err;
         var db =client.db("openDB")
         var collection = db.collection('questions');
