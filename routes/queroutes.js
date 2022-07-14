@@ -58,17 +58,28 @@ router.post("/askquestion", authenticate , upload.single("files"),function(req,r
     var today = new Date();
 
 var dateQuest = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+var image = {}
+if (req.file==undefined){
+    var image = {
+      default:"No image"  
+   }
+   }
+if (req.file!==undefined){
+    var image = {
+        data: fs.readFileSync(path.join( 'C:/Users/Anonymous/Desktop/Origin-cloud-main/Origin-cloud-main/uploads/' + req.file.filename)),
+        contentType: 'image/png'
+    }
 
-
+   console.log(image);
+   }
 const Question = new questionModel({
+
             author:req.user.uid,
             title:question_title,
              cateogary:question_cateogary,
              tags:question_tags,
              details:question_details,
-             img: {
-                data: fs.readFileSync(path.join( 'C:/Users/Anonymous/Desktop/Origin-cloud-main/Origin-cloud-main/uploads/' + req.file.filename)),
-                contentType: 'image/png'
+             img: image,
             },
             date:dateQuest
              
