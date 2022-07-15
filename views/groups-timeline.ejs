@@ -218,12 +218,28 @@
 			<div class="menu-left">
 				<ul class="left-menu">
 					<li>
-						<a href="/" title="Questions"
-							data-toggle="tooltip" data-placement="right">
+						<a href="/" title="Questions" data-toggle="tooltip" data-placement="right">
 							<i class="ti-magnet"></i>
 						</a>
 					</li>
-					
+											
+					<% if(login_id==User_id){ %>
+					<li>
+						<a class="" title="Notifications" data-toggle="tooltip" data-placement="right" href="/user/notifications/<%=User._id%>">Notifications
+						<i class="ti-bell"></i>
+						</a>
+					</li>
+					<li>
+						<a title="Pro - Mentor" data-toggle="tooltip" data-placement="right"class="active" href="/user/mentor">Be a Mentor
+						<i class="ti-user"></i>
+						</a>
+					</li>
+					<li>
+						<a title="Pro - Mentee" data-toggle="tooltip" data-placement="right" class="active" href="/user/mentee">Find Mentor
+						<i class="ti-user"></i>
+						</a>
+					</li>
+					<% } %>
 
 
 
@@ -331,12 +347,11 @@
 											<ul class="short-profile">
 												<li>
 													<span>About</span>
-													<p>Hi, Let's discuss about the live cricket matches and help others
-														with questions related to cricket. </p>
+													<p> </p>
 												</li>
 												<li>
 													<span>Category</span>
-													<p>Sports </p>
+													<p> </p>
 												</li>
 												<li>
 													<span>Admin</span>
@@ -345,20 +360,7 @@
 											</ul>
 										</div>
 
-										<div class="widget pitnik-links stick-widget">
-											<ul>
-												<li><a href="#" title="">#cricket</a></li>
-												<li><a href="#" title="">#questions</a></li>
-												<li><a href="#" title="">#discussions</a></li>
-												<li><a href="#" title="">#icc</a></li>
-												<li><a href="#" title="">#IPL</a></li>
-												<li><a href="#" title="">#India</a></li>
-												<li><a href="#" title="">#BCCI</a></li>
-												<li><a href="#" title="">#Australia</a></li>
-												<li><a href="#" title="">#England</a></li>
-											</ul>
-
-										</div><!-- little links -->
+										
 									</aside>
 								</div><!-- sidebar -->
 
