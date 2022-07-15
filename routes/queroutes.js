@@ -80,7 +80,6 @@ const Question = new questionModel({
              tags:question_tags,
              details:question_details,
              img: image,
-            },
             date:dateQuest
              
 })
