@@ -76,10 +76,28 @@
 			<ul class="left-menu">
 				
 				<li>
-					<a href="/" title="Questions" data-toggle="tooltip" data-placement="right">
-						<i class="ti-magnet"></i>
-					</a>
-				</li>
+						<a href="/" title="Questions" data-toggle="tooltip" data-placement="right">
+							<i class="ti-magnet"></i>
+						</a>
+					</li>
+											
+					<% if(login_id==User_id){ %>
+					<li>
+						<a class="" title="Notifications" data-toggle="tooltip" data-placement="right" href="/user/notifications/<%=User._id%>">Notifications
+						<i class="ti-bell"></i>
+						</a>
+					</li>
+					<li>
+						<a title="Pro - Mentor" data-toggle="tooltip" data-placement="right"class="active" href="/user/mentor">Be a Mentor
+						<i class="ti-user"></i>
+						</a>
+					</li>
+					<li>
+						<a title="Pro - Mentee" data-toggle="tooltip" data-placement="right" class="active" href="/user/mentee">Find Mentor
+						<i class="ti-user"></i>
+						</a>
+					</li>
+					<% } %>
 				
 				
 				
@@ -104,11 +122,7 @@
 										</label>
 									</div>
 									<img src="/images/resources/profile-image.jpg" alt="">
-									<!-- <ul class="profile-controls">
-										<li><a href="#" title="Follow" data-toggle="tooltip"><i class="fa fa-user-plus"></i></a></li>
-										<li><a href="#" title="UnFollow" data-toggle="tooltip"><i class="fa fa-star"></i></a></li>
-										
-									</ul> -->
+									
 									
 								</figure>
 								
@@ -155,7 +169,7 @@
 											<ol class="folw-detail">
 												<li><span>Posts</span><ins>101</ins></li>
 												<li><span>Followers</span><ins><%=User.followers.length%></ins></li>
-												<li><span>Following</span><ins><%=User.followers.length%></ins></li>
+												<li><span>Following</span><ins><%=User.following.length%></ins></li>
 											</ol>
 										</div>
 									</div>
