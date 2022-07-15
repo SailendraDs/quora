@@ -63,9 +63,10 @@
 						
 						<ul class="log-out">
 							<li><a href="/post/timeline/<%=grroup.group_name%>" title=""><i class="ti-user"></i> view timeline</a></li>
-							<!-- <li><a href="#" title=""><i class="ti-pencil-alt"></i>edit profile</a></li>
-							
-							<li><a href="#" title=""><i class="ti-power-off"></i>log out</a></li> -->
+							<% if(login_id==User_id){ %>
+                        <li><a href="/user/editprofile/<%=User_id%>" title=""><i class="ti-pencil-alt"></i>edit profile</a></li>
+                        <% } %>
+                        <li><a href="/user/logout" title=""><i class="ti-power-off"></i>log out</a></li>
 						</ul>
 					</div>
 				</div>
@@ -139,18 +140,18 @@
 													
 												<div class="author-content">
 													<a class="h4 author-name" href="#"><%=grroup.group_name%></a>
-													<div class="country">Sports</div>
+													
 												</div>
 											</div>
 										</div>
 										<div class="col-lg-10 col-md-9">
 											<ul class="profile-menu">
 												<li>
-													<a class="active" href="C:\Users\stack\Desktop\Your Sawaal\groups\timeline.html">Newsfeed</a>
+													<a class="active" href="/post/grouptimeline/<%=grp.group_name%>">Newsfeed</a>
 												</li>
 												
 												<li>
-													<a class="" href="C:\Users\stack\Desktop\Your Sawaal\groups\timeline-friends.html">Followers</a>
+													<a class="" href="/groups/followers/<%=grp.group_name%>">Followers</a>
 												</li>
 												
 												
