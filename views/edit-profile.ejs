@@ -61,7 +61,7 @@
 					
 					<ul class="log-out">
 						<li><a href="/user/viewprofile/<%=User._id%>" title=""><i class="ti-user"></i> view profile</a></li>
-						<!-- <li><a class="active" href="edit-profile.html" title=""><i class="ti-pencil-alt"></i>edit profile</a></li> -->
+						<!-- <li><a class="active" href="#" title=""><i class="ti-pencil-alt"></i>edit profile</a></li> -->
 						
 						<li><a href="/user/logout" title=""><i class="ti-power-off"></i>log out</a></li>
 					</ul>
@@ -76,20 +76,11 @@
 			<ul class="left-menu">
 				
 				<li>
-					<a href="C:\Users\stack\Desktop\Your Sawaal\questions\questions.html" title="Questions" data-toggle="tooltip" data-placement="right">
+					<a href="/" title="Questions" data-toggle="tooltip" data-placement="right">
 						<i class="ti-magnet"></i>
 					</a>
 				</li>
-				<li>
-					<a href="C:\Users\stack\Desktop\Your Sawaal\groups\timeline.html" title="Groups" data-toggle="tooltip" data-placement="right">
-						<i class="fa fa-users"></i>
-					</a>
-				</li>
-				<li>
-					<a href="C:\Users\stack\Desktop\Your Sawaal\questions\question-details.html" title="Answer" data-toggle="tooltip" data-placement="right">
-						<i class="fa fa-forumbee"></i>
-					</a>
-				</li>
+				
 				
 				
 				
@@ -153,7 +144,7 @@
 													<a class="" href="/user/viewprofile/<%=User._id%>">About</a>
 												</li>
 												<li>
-													<a class="" href="/user/viewprofile/<%=User._id%>">Followers</a>
+													<a class="" href="/user/followers/<%=User._id%>">Followers</a>
 												</li>
 												<li>
 													<a class="" href="/groups/grouphome/<%=User._id%>">Groups</a>
@@ -186,7 +177,7 @@
 												<div class="tab-pane fade show active" id="edit-profile" >
 													<div class="set-title">
 														<h5>Edit Profile</h5>
-														<span>People on Pitnik will get to know you with the info below</span>
+														<span>People on Your Sawaal will get to know you with the info below</span>
 													</div>
 													<div class="setting-meta">
 														<div class="change-photo">
@@ -206,17 +197,17 @@
 													<div class="stg-form-area">
 														<form method="post" action="/user/update/<%=User._id%>" class="c-form">
 															<!-- <div>
-																<label>Display Name</label>
-																<input type="text" placeholder="Jack Carter">
+																<label>Full Name</label>
+																<input type="text" placeholder="Full Name">
 															</div>
 															
 															<div class="uzer-nam">
 																<label>User Name</label>
-																<span>www.pitnik.com/</span><input type="text" placeholder="jackcarter4023">
+																<input type="text" placeholder="username">
 															</div> -->
 															<!-- <div>
 																<label>Email Address</label>
-																<input type="text" placeholder="abc@pitnikmail.com">
+																<input type="text" placeholder="Email Address">
 															</div> -->
 															<div>
 																<label>Gender</label>
@@ -266,7 +257,7 @@
 
 															<div>
 																<label>Location</label>
-																<input type="text" name="location" placeholder="Ex.San Francisco, CA">
+																<input type="text" name="location" placeholder="City">
 															</div>
 															<div>
 																<label>Country</label>
