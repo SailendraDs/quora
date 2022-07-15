@@ -76,10 +76,7 @@
                 <div class="user-setting">
                     
                      <ul class="log-out">
-                        <li><a href="/user/viewprofile/<%= User._id %>" title=""><i class="ti-user"></i> view profile</a></li>
-			<% if(login_id==User_id){ %>
-                        <li><a href="/user/editprofile/<%=User_id%>" title=""><i class="ti-pencil-alt"></i>edit profile</a></li>
-                        <% } %>
+                        
                         <li><a href="/user/logout" title=""><i class="ti-power-off"></i>log out</a></li>
                     </ul>
                 </div>
@@ -99,17 +96,15 @@
 					</li>
 					
 					<li>
-						<a title="Pro - Mentor" data-toggle="tooltip" data-placement="right"class="active" href="/user/mentor">Be a Mentor
+						<a title="Pro - Mentor" data-toggle="tooltip" data-placement="right"class="active" href="/user/mentor"
 						<i class="ti-user"></i>
 						</a>
 					</li>
 					<li>
-						<a title="Pro - Mentee" data-toggle="tooltip" data-placement="right" class="active" href="/user/mentee">Find Mentor
+						<a title="Pro - Mentee" data-toggle="tooltip" data-placement="right" class="active" href="/user/mentee"
 						<i class="ti-user"></i>
 						</a>
 					</li>
-                    
-            
                 
                 
                 
