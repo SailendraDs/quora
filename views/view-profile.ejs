@@ -76,20 +76,11 @@
 			<ul class="left-menu">
 				
 				<li>
-					<a href="C:\Users\stack\Desktop\Your Sawaal\questions\questions.html" title="Questions" data-toggle="tooltip" data-placement="right">
+					<a href="/" title="Questions" data-toggle="tooltip" data-placement="right">
 						<i class="ti-magnet"></i>
 					</a>
 				</li>
-				<li>
-					<a href="C:\Users\stack\Desktop\Your Sawaal\groups\timeline.html" title="Groups" data-toggle="tooltip" data-placement="right">
-						<i class="fa fa-users"></i>
-					</a>
-				</li>
-				<li>
-					<a href="C:\Users\stack\Desktop\Your Sawaal\questions\question-details.html" title="Answer" data-toggle="tooltip" data-placement="right">
-						<i class="fa fa-forumbee"></i>
-					</a>
-				</li>
+				
 				
 				
 				
@@ -181,10 +172,7 @@
 										<p>
 											<%=User.about%>
 										</p>
-										<span class="f-title"><i class="fa fa-birthday-cake"></i> Birthday:</span>
-										<p>
-											November 17 
-										</p>
+										
 										<span class="f-title"><i class="fa fa-envelope"></i> Email Address:</span>
 										<p>
 											<%=User.email%>
@@ -196,20 +184,20 @@
 										</p>
 										<span class="f-title"><i class="fa fa-globe"></i> Country:</span>
 										<p>
-										India
+										<%=User.country%>
 										</p>
 										<span class="f-title"><i class="fa fa-briefcase"></i> Occupation:</span>
 										<p>
-											Web [web2.0 & web3.0] Developer
+											<%=User.occupation%>
 										</p>
 										<span class="f-title"><i class="fa fa-handshake-o"></i> Joined:</span>
 										<p>
 											<%=User.joined%>  
 										</p>
 										
-										<span class="f-title"><i class="fa fav-play"></i> Website:</span>
+										<span class="f-title"><i class="fa fav-play"></i> City:</span>
 										<p>
-											<a href="https://stacknation.org" >https://stacknation.org</a> 
+											<%=User.location%> 
 										</p>
 										
 									</div>
@@ -227,12 +215,7 @@
 													<%=User.hobby%>
 												</p>
 											</div>
-											<!-- <div class="gen-metabox">
-												<span><i class="fa fa-plus"></i> Interests</span>
-												<p>
-													Editing, VFX Designing, UI/UX, Content Writing, Coding
-												</p>
-											</div> -->
+											
 										</div>
 										<div class="col-lg-6">
 											<div class="gen-metabox">
