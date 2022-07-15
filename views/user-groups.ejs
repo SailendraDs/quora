@@ -82,13 +82,29 @@
 		<div class="menu-left">
 			<ul class="left-menu">
 				
-				
 				<li>
-					<a href="/" title="Questions" data-toggle="tooltip" data-placement="right">
-						<i class="ti-magnet"></i>
-					</a>
-				</li>
-				
+						<a href="/" title="Questions" data-toggle="tooltip" data-placement="right">
+							<i class="ti-magnet"></i>
+						</a>
+					</li>
+											
+					<% if(login_id==User_id){ %>
+					<li>
+						<a class="" title="Notifications" data-toggle="tooltip" data-placement="right" href="/user/notifications/<%=User._id%>">Notifications
+						<i class="ti-bell"></i>
+						</a>
+					</li>
+					<li>
+						<a title="Pro - Mentor" data-toggle="tooltip" data-placement="right"class="active" href="/user/mentor">Be a Mentor
+						<i class="ti-user"></i>
+						</a>
+					</li>
+					<li>
+						<a title="Pro - Mentee" data-toggle="tooltip" data-placement="right" class="active" href="/user/mentee">Find Mentor
+						<i class="ti-user"></i>
+						</a>
+					</li>
+					<% } %>
 				
 				
 				
@@ -140,7 +156,7 @@
 												</div>
 													
 												<div class="author-content">
-													<a class="h4 author-name" href="about.html"><%=User.name%></a>
+													<a class="h4 author-name" href=""/userpost/timeline/<%=User._id%>"><%=User.name%></a>
 													<div class="country"><%=User.location%>, <%=User.country%></div>
 												</div>
 											</div>
@@ -179,7 +195,7 @@
 										<div class="row">
 											<div class="col-lg-6">
 												<div class="align-left">
-													<h5>Groups <span></span></h5>
+													<h5> <span></span></h5>
 												</div>
 											</div>
 											<div class="col-lg-6">
