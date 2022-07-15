@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
-		<title>Your Sawal :: Group</title>
+		<title>Your Sawal :: Group | Followers</title>
 		<link rel="icon" href="/images/logo.jpg" type="image/png" sizes="16x16"> 
 		
 		<link rel="stylesheet" href="/css/main.min.css">
@@ -46,7 +46,7 @@
 					</form>
 				</div>
 				<div class="page-name">
-					<span> Cricket Group</span>
+					<span> <%=grroup.group_name%></span>
 				 </div>
 				<ul class="setting-area">
 					
@@ -63,7 +63,7 @@
 						
 						<ul class="log-out">
 							<li><a href="/post/timeline/<%=grroup.group_name%>" title=""><i class="ti-user"></i> view timeline</a></li>
-							<!-- <li><a href="edit-profile.html" title=""><i class="ti-pencil-alt"></i>edit profile</a></li>
+							<!-- <li><a href="#" title=""><i class="ti-pencil-alt"></i>edit profile</a></li>
 							
 							<li><a href="#" title=""><i class="ti-power-off"></i>log out</a></li> -->
 						</ul>
@@ -80,20 +80,11 @@
 				<ul class="left-menu">
 					
 					<li>
-						<a href="C:\Users\stack\Desktop\Your Sawaal\questions\questions.html" title="Questions" data-toggle="tooltip" data-placement="right">
+						<a href="/" title="Questions" data-toggle="tooltip" data-placement="right">
 							<i class="ti-magnet"></i>
 						</a>
 					</li>
-					<li>
-						<a href="C:\Users\stack\Desktop\Your Sawaal\groups\timeline.html" title="Groups" data-toggle="tooltip" data-placement="right">
-							<i class="fa fa-users"></i>
-						</a>
-					</li>
-					<li>
-						<a href="C:\Users\stack\Desktop\Your Sawaal\questions\question-details.html" title="Answer" data-toggle="tooltip" data-placement="right">
-							<i class="fa fa-forumbee"></i>
-						</a>
-					</li>
+					
 				
 					
 					
@@ -147,7 +138,7 @@
 												</div>
 													
 												<div class="author-content">
-													<a class="h4 author-name" href="#">Cricket Group</a>
+													<a class="h4 author-name" href="#"><%=grroup.group_name%></a>
 													<div class="country">Sports</div>
 												</div>
 											</div>
@@ -203,7 +194,7 @@
 													<img src="/images/resources/classic-new1.jpg" alt="">
 													<div class="frnd-name">
 														<a href="/user/viewprofile/<%=grroup.members[i]%>" title=""><%=grroup.members[i]%></a>
-														<span>Bangalore, India</span>
+														
 													</div>
 												
 													
