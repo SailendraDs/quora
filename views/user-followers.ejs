@@ -46,7 +46,7 @@
                 </form>
 			</div>
 			<div class="page-name">
-			    <span> Followers</span>
+			    <span> User Followers</span>
 			 </div>
 			<ul class="setting-area">
 				
@@ -65,7 +65,7 @@
 						<li><a href="/user/viewprofile/<%=User._id%>" title=""><i class="ti-user"></i> view profile</a></li>
 						<!-- <li><a href="/user/update/<%=User._id%>" title=""><i class="ti-pencil-alt"></i>edit profile</a></li> -->
 						
-						<!-- <li><a href="/user/logout" title=""><i class="ti-power-off"></i>log out</a></li> -->
+						<li><a href="/user/logout" title=""><i class="ti-power-off"></i>log out</a></li>
 					</ul>
 				</div>
 			</div>
@@ -80,20 +80,11 @@
 		<div class="menu-left">
 			<ul class="left-menu">
 				<li>
-					<a href="C:\Users\stack\Desktop\Your Sawaal\questions\questions.html" title="Questions" data-toggle="tooltip" data-placement="right">
+					<a href="/" title="Questions" data-toggle="tooltip" data-placement="right">
 						<i class="ti-magnet"></i>
 					</a>
 				</li>
-				<li>
-					<a href="C:\Users\stack\Desktop\Your Sawaal\groups\timeline.html" title="Groups" data-toggle="tooltip" data-placement="right">
-						<i class="fa fa-users"></i>
-					</a>
-				</li>
-				<li>
-					<a href="C:\Users\stack\Desktop\Your Sawaal\questions\question-details.html" title="Answer" data-toggle="tooltip" data-placement="right">
-						<i class="fa fa-forumbee"></i>
-					</a>
-				</li>
+				
 			
 			
 				
@@ -209,7 +200,7 @@
 													<img src="/images/resources/classic-new2.jpg" alt="">
 													<div class="frnd-name">
 														<a href="/user/viewprofile/<%=User.followers[i]%>" title=""><%=User.followers[i]%></User.followers></a>
-														<span>Bangalore, India</span>
+													
 													</div>
 												
 													
@@ -272,8 +263,8 @@
 										
 									</div>
 									<div class="lodmore">
-										<span>Viewing 1-4 of <%=User.followers.length%> followers</span>
-										<button class="btn-view btn-load-more"></button>
+										<span>Viewing <%=User.followers.length%> followers</span>
+										
 									</div>
 								</div>
 							</div>	
