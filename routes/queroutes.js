@@ -6,7 +6,7 @@ const router = express.Router()
 const { authenticate, authorize } = require('../controllers/user.controller')
 
 router.get("/askquestion",authenticate, function(req,res){
-    res.render("ask-question")
+    res.json("ask-question")
 })
 
 
@@ -97,7 +97,7 @@ router.get("/",async function(req,res){
     questionModel.find({},function(err,founditems){
         // var thumb = new Buffer(founditems.image.data).toString('base64')
         console.log(founditems.details);
-        res.render("questions",{newQuestions:founditems,Ads:ad})
+        res.json("questions",{newQuestions:founditems,Ads:ad})
         //  console.log(founditems);
     })
    
@@ -111,7 +111,7 @@ router.get("/questions/:id", authenticate, async function(req,res){
         console.log(foundOne.title);
 
 
-        res.render("question-details",{Question:foundOne,Answers:foundOne.answers,Questcomments:foundOne.questComment})
+        res.json("question-details",{Question:foundOne,Answers:foundOne.answers,Questcomments:foundOne.questComment})
         // console.log(Answers);
     
 
@@ -125,7 +125,7 @@ router.post("/questions/:id", authenticate, async function(req,res){
         console.log(foundOne.title);
 
 
-        res.render("question-details",{Question:foundOne,Answers:foundOne.answers,Questcomments:foundOne.questComment})
+        res.json("question-details",{Question:foundOne,Answers:foundOne.answers,Questcomments:foundOne.questComment})
         // console.log(Answers);
     
 
@@ -236,7 +236,7 @@ router.post("/search" ,async function(req,res){
     const Groups = await Group.find({group_name:{$regex:tag,$options:"i"}})
         // var thumb = new Buffer(founditems.image.data).toString('base64')
         
-        res.render("search-result",{keyword:tag,questions:Questions,users:Users,groups:Groups,posts:Userposts})
+        res.json("search-result",{keyword:tag,questions:Questions,users:Users,groups:Groups,posts:Userposts})
         //  console.log(founditems);
    
 })

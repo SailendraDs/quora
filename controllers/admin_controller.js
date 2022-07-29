@@ -27,7 +27,7 @@ const loginAdmin = async function (req,res){
             }, process.env.SECRET)
             res.cookie('token', token, { httpOnly: true });
             console.log(token);
-            res.redirect("/admin/dashboard")
+            res.json("/admin/dashboard")
         } else {
             res.json({
                 error: "Invalid username or password." // Password didn't match
@@ -75,7 +75,7 @@ const approveAd = async function (req,res){
     }
 
     const ad = await Ad.find({})
-    res.redirect("/admin/dashboard") 
+    res.json("/admin/dashboard") 
 
 }
 
@@ -91,14 +91,14 @@ const adminAuthenticate = (req, res, next) => {
 			console.log(payload);
 			next()
 		} else {
-			res.redirect("/admin/signin")
+			res.json("/admin/signin")
 			// res.json({
 			// 	error: "Authantication failed",
 			// 	login: false
 			// })
 		}
 	} else {
-		res.redirect("/admin/signin")
+		res.json("/admin/signin")
 
 		// res.json({
 		// 	error: "Authantication failed",

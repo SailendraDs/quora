@@ -15,7 +15,7 @@ router.get("/signin",createAdmin)
 
 router.get("/dashboard",adminAuthenticate, async function(req,res){
     const ad = await Ad.find({})
-    res.render("admin-ads",{Ads:ad})
+    res.json("admin-ads",{Ads:ad})
 })
 
 router.post("/dashboard",loginAdmin)

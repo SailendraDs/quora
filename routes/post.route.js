@@ -34,7 +34,7 @@ router.get('/grouptimeline/:name', authenticate , async function(req,res){
     console.log(grroup.members.length);
     Post.find({group:grp_name},function(err,foundposts){
         // console.log(foundposts);
-        res.render("groups-timeline",{posts:foundposts,groupPost:grp_name,grp:grroup,Loggedin:logged_in,Ads:ad})
+        res.json("groups-timeline",{posts:foundposts,groupPost:grp_name,grp:grroup,Loggedin:logged_in,Ads:ad})
     })
     
 })
